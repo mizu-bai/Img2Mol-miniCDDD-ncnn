@@ -1,0 +1,6 @@
+7767517
+4 4
+Input                    input_2                                 0 1  input_2_blob 0=0 1=0 2=512 
+InnerProduct             dense_2                                 1 1 input_2_blob dense_2_blob 0=512 1=1 2=262144 9=1 
+InnerProduct             dense_3                                 1 1 dense_2_blob dense_3_blob 0=128 1=1 2=65536 9=1 
+InnerProduct             classification_output                   1 1 dense_3_blob classification_output_blob 0=7 1=1 2=896 9=0 
