@@ -1,3 +1,7 @@
+# model
+*.param
+*.bin
+
 # ncnn
 ncnn-20231027/
 
