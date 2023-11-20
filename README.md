@@ -3,7 +3,9 @@
 ## Introduction
 
 In this project, I hope to build up a model that read in chemical structural
-formula from images and predict the properties, including 
+formula from images and predict the properties, including LogP, molecular
+refractivity, Blaban J, number of H acceptors, number of H donors, number of
+valence electrons, and topological polar surface area.
 
 - [Img2Mol](https://github.com/bayer-science-for-a-better-life/Img2Mol) is an
 accurate SMILES recognition from molecular graphical depictions.
