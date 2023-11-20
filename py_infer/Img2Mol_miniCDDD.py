@@ -23,7 +23,7 @@ def _img2mol_preprocess(
     img_file: str,
 ) -> np.array:
     img2mol = Img2MolInference()
-    imgs = img2mol.read_image_to_tensor(args.image).clone().detach().numpy()
+    imgs = img2mol.read_image_to_tensor(img_file).clone().detach().numpy()
 
     return imgs
 
