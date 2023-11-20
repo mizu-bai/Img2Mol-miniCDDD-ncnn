@@ -1,11 +1,22 @@
-# Img2Mol-ncnn
+# Img2Mol-miniCDDD-ncnn
 
 ## Introduction
 
-[Img2Mol](https://github.com/bayer-science-for-a-better-life/Img2Mol) is an
+In this project, I hope to build up a model that read in chemical structural
+formula from images and predict the properties, including 
+
+- [Img2Mol](https://github.com/bayer-science-for-a-better-life/Img2Mol) is an
 accurate SMILES recognition from molecular graphical depictions.
 
+- [CDDD](https://https://github.com/jrwnter/cddd) is the Continuous and
+Data-Driven Descriptors for short.
+
+- [miniCDDD](https://github.com/lianghsun/miniCDDD) is an unofficial mini version
+of the original Continuous and Data-Driven Descriptors.
+
 ## Model Convert
+
+### Img2Mol
 
 In order to convert Img2Mol model, the original model should be download first.
 
@@ -24,3 +35,11 @@ from another model [CDDD](https://github.com/jrwnter/cddd).
 In folder `img2mol_convert`, a jupyter notebook is used to convert the encoder
 from PyTorch model to ncnn model via pnnx, and the accuracy has been validated
 by calculating the cosine similarity.
+
+The next part is to convert CDDD classification model, while the original model
+was written in Tensorflow 1.0. Luckily, there is another implemetation with
+Keras. So I use a modified version of
+[keras2ncnn](https://github.com/MarsTechHAN/keras2ncnn) which supports
+1-dimension input, named
+[keras2ncnn-1d](https://github.com/mizu-bai/keras2ncnn-1d).
+
